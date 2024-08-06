@@ -3,12 +3,16 @@ def handle_return(generator, func):
     func(returned)
     
 def generate():
-    yield 1
-    yield 2
-    return 3
+    yield '   string 12   '
+    yield 'striong 2   '
+    return (3, 'string 3  ')
 
 def show_return(value):
     print('returned: {}'.format(value))
 
 for x in handle_return(generate(), show_return):
-    print(x)
+    print(x.strip())
+
+# string 12
+# striong 2
+# returned: (3, 'string 3  ')
